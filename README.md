@@ -1,5 +1,5 @@
 # RISC-V_tapeout_VSD
-### thanks to VSD team and kunal ghosh for letting me part of this event
+thanks to VSD team and kunal ghosh for letting me part of this event
 
 ### First we will start with basic tools installation like
 1. Yosys
