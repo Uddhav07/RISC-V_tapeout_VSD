@@ -28,3 +28,35 @@ synth -top sub_module1
 1. preffered when multiple instances of same module exist
 2. divide and conquer, convert massive netlist to smaller and 
 
+## 3. Flop Coding styles
+why flops  
+-> propogation delay in semi hierarchies causes glitching  
+
+too many combination elements cause glitching, so flops are used to settle down the the inputs and get it at certain specified amount of time  
+set/ reset  <===> asynchronous/ synchronous  
+synchronous: only when clk edge occurs  
+asynchronous: whenever the set/reset changes, irrespective of the clk
+
+<img width="2304" height="1440" alt="image" src="https://github.com/user-attachments/assets/705b6858-de73-40ff-a9ef-727df80e671f" />
+
+
+<img width="1052" height="699" alt="image" src="https://github.com/user-attachments/assets/7c56389e-d81e-4cf6-9cef-8399140ba65b" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
