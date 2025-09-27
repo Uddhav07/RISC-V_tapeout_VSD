@@ -66,5 +66,3 @@ iverilog ../lib/sky130_fd_sc_hd__tt_025C_1v80.lib  ../my_lib/verilog_model/sky13
 ![fixed it](image-4.png)
 
 bad mux is giving flop behaviour due to synth sim mismatch.
-
-## 3. 
