@@ -4,6 +4,7 @@
 
 As per the instructions, setting up the directories on your own is not required,    
 still heres the structure will look like after 2.1 is done.
+
 ![alt text](image.png)
 
 ## 2. Module Descriptions
@@ -45,7 +46,7 @@ in this image
 now on right clicking on OUT, converted it to analog signal, interpolated
 ![alt text](image-2.png)
 
-### 2.1.2 OpenLANE
+#### 2.1.2 OpenLANE Installation
 
 automated RTL to GDSII flow
 
@@ -56,7 +57,7 @@ i wont be since i have already installed this earlier using this, <https://githu
 
 use either i havent tried 1st one.
 
-#### How to Synthesize the Design
+#### 2.1.3 How to Synthesize the Design
 
 To synthesize the VSDBabySoC design, follow these steps:
 
@@ -84,5 +85,68 @@ added hieght for better clarity.
 1. \core.CLK: input CLK signal of the RVMYTH core. This signal comes from the PLL, originally.
 2. reset: input reset signal of the RVMYTH core. This signal comes from an external source, originally.
 3. OUT:  output OUT signal of the VSDBabySoC module. This signal comes from the DAC (due to simulation restrictions it behaves like a digital signal which is incorrect), originally.
-4. \core.OUT[9:0]:  10-bit output [9:0] OUT port of the RVMYTH core. This port comes from the RVMYTH register #17, originally.
+4. \core.OUT\[9:0\]:  10-bit output \[9:0\] OUT port of the RVMYTH core. This port comes from the RVMYTH register #17, originally.
 5. OUT: This is a real datatype wire which can simulate analog values. It is the output wire real OUT signal of the DAC module. This signal comes from the DAC, originally.
+
+#### STA using OpenSta
+
+```sdc file contents
+# sdc file contents
+set_units -time ns
+create_clock [get_pins {pll/CLK}] -name clk -period 11
+```
+
+```bash
+cd ~/vsd/VSDBabySoC/
+make sta
+```
+
+### 2.2 RVMYTH
+
+```bash
+cd ~/vsd/VSDBabySoC/src/module/ 
+git clone https://github.com/kunalg123/rvmyth/
+cd rvmyth
+iverilog mythcore_test.v tb_mythcore_test.v
+./a.out
+gtkwave tb_mythcore_test.vcd
+```
+
+### 2.3 PLL
+
+![alt text](127774506-b254b925-d629-4f40-8440-e0f332b1e57c.jpg)
+
+Phase locked loop is responsible for creating a precise clock signal without any noise(frequency or phase). 
+
+#### Design Flow
+
+1. Specifications of the IC
+2. SPICE level circuit development
+3. Pre-layout simulation
+
+#### 8x PLL Clock Multiplier IP on the Google-Skywater 130nm node
+
+##### Installing Google-Skywater 130nm node
+
+```bash
+git clone https://github.com/google/skywater-pdk.git
+# Expect a large download! ~7GB at time of writing.
+SUBMODULE_VERSION=latest make submodules -j3 || make submodules -j1
+
+# Regenerate liberty files
+make timing
+```
+
+### pre and post synthesis rvmyth
+
+#### 10-bit digital codes
+
+```bash
+iverilog mythcore_test.v tb_mythcore_test.v
+./a.out
+gtkwave tb_mythcore_test.vcd
+```
+
+![alt text](image-5.png)
+
+
