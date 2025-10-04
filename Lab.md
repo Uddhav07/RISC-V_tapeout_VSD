@@ -147,6 +147,6 @@ iverilog mythcore_test.v tb_mythcore_test.v
 gtkwave tb_mythcore_test.vcd
 ```
 
-![alt text](image-5.png)
+![alt text](image-2.png)
 
 
