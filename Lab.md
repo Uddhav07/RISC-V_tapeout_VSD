@@ -147,6 +147,6 @@ iverilog mythcore_test.v tb_mythcore_test.v
 gtkwave tb_mythcore_test.vcd
 ```
 
-![alt text](image-2.png)
+<img width="1919" height="202" alt="image" src="https://github.com/user-attachments/assets/922b8e0f-94e1-44b8-b304-41824bf4ef6e" />
 
 
