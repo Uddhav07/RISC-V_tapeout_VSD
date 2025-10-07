@@ -137,7 +137,7 @@ SUBMODULE_VERSION=latest make submodules -j3 || make submodules -j1
 make timing
 ```
 
-### pre and post synthesis rvmyth
+### pre synthesis rvmyth
 
 #### 10-bit digital codes
 
