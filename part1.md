@@ -120,6 +120,18 @@ cd VSDBabySoC/output/post_synth_sim/
 gtkwave post_synth_sim.vcd
 ```
 
+### Synthesis logs added in a section above
+
+command for reference
+
+```yosys
+synth -top vsdbabysoc
+```
+
+### GLS waveform
+
 ![alt text](image-11.png)
 
-q
+### Short note
+
+after comparing pre and post synthesis, simulations are almost identical.
