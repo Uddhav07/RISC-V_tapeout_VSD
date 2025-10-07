@@ -1,0 +1,7 @@
+{
+    "markdown.validate.enabled": true,
+    "markdown.validate.ignoredLinks": [
+        "image-1.png",
+        "image.png"
+    ]
+}
