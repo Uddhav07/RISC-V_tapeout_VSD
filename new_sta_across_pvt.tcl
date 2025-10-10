@@ -1,27 +1,3 @@
-# OpenSTA
-
-## Installing OpenSTA
-
-<https://github.com/Ananya-KM/VSD_HDP/blob/main/Day7.md>
-
-```bash
-cd OpenSTA
-docker build --file Dockerfile.ubuntu22.04 --tag opensta .
-```
-
-To run a docker container using the OpenSTA image, use the -v option to docker to mount direcories with data to use and -i to run interactively.
-
-```bash
-docker run -i -v $HOME:/data opensta
-```
-
-## next is the script
-
-<https://github.com/arunkpv/vsd-hdp/blob/main/docs/Day_19.md>
-
-The below tcl script sta_across_pvt.tcl can be run to performt the STA across the PVT corners for which the sky130 lib files are available
-
-```tcl
  set list_of_lib_files(1) "sky130_fd_sc_hd__tt_025C_1v80.lib"
  set list_of_lib_files(2) "sky130_fd_sc_hd__ff_100C_1v65.lib"
  set list_of_lib_files(3) "sky130_fd_sc_hd__ff_100C_1v95.lib"
@@ -60,4 +36,3 @@ The below tcl script sta_across_pvt.tcl can be run to performt the STA across th
  exec echo "$list_of_lib_files($i)" >> /data/vsd/OpenSTA/examples/BabySOC/STA_OUPUT/sta_wns.txt
  report_wns -digits {4} >> /data/vsd/OpenSTA/examples/BabySOC/STA_OUPUT/sta_wns.txt
  }
-```
