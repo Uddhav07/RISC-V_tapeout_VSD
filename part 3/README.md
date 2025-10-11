@@ -61,3 +61,15 @@ The below tcl script sta_across_pvt.tcl can be run to performt the STA across th
  report_wns -digits {4} >> /data/vsd/OpenSTA/examples/BabySOC/STA_OUPUT/sta_wns.txt
  }
 ```
+
+## Results
+
+| Process | Setup Slack (ns) |     |      | Hold Slack (ns) |     |      | WNS (ns) |     | TNS (ns) |     |
+|---------|------------------|-----|------|-----------------|-----|------|----------|-----|----------|-----|
+|         | min              | max | mean | min             | max | mean | min      | max | min      | max |
+| FF      | 0.9674           | 3.7718 | 2.3914 | 0.196      | 0.2915 | 0.2432 | 0.0 | 0.0 | 0.0 | 0.0 |
+| SS      | -53.5971         | -4.2197 | -22.3587 | 0.5038  | 1.8296 | 1.0491 | -53.5971 | -4.2197 | -37219.3945 | -1977.7168 |
+| TT      | 0.9766           | 0.9766 | 0.9766 | 0.3096     | 0.3096 | 0.3096 | 0.0 | 0.0 | 0.0 | 0.0 |
+
+
+![g](chart-1.png) ![g](timing_violations_heatmap-1.png) ![g](hold_slack_chart-1.png) ![g](setup_slack_chart-1.png) ![g](slack_comparison-1.png)
