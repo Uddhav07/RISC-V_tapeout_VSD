@@ -162,6 +162,3 @@ plot -vdd#branch
 ```
 
 ![alt text](image-44.png)
-
-
-

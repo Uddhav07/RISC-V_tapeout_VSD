@@ -4,37 +4,63 @@
 
 ### L1: SPICE simulation for lower nodes
 
-*[Add your notes here]*
+![alt text](image-1.png)
+
+
 
 ---
 
 ### L2: Drain current vs gate voltage for long and short channel device
 
-*[Add your notes here]*
+![alt text](image.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
 
 ---
 
 ### L3: Velocity saturation at lower and higher electric fields
 
-*[Add your notes here]*
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+![alt text](image-10.png)
 
 ---
 
 ### L4: Velocity saturation drain current model
 
-*[Add your notes here]*
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+![alt text](image-13.png)
+
+![alt text](image-15.png)
+
+![alt text](image-16.png)
+
+uA not um
 
 ---
 
 ### L5: Labs Sky130 Id-Vgs
 
-*[Add your notes here]*
+![alt text](image-17.png)
+
+![alt text](image-18.png)
 
 ---
 
 ### L6: Labs Sky130 Vt
 
-*[Add your notes here]*
+![alt text](image-19.png)
 
 ---
 
@@ -42,36 +68,48 @@
 
 ### L1: MOSFET as a switch
 
-*[Add your notes here]*
+![alt text](image-20.png)
+
+![alt text](image-21.png)
 
 ---
 
 ### L2: Introduction to standard MOS voltage current parameters
 
-*[Add your notes here]*
+![alt text](image-22.png)
+
+![alt text](image-23.png)
 
 ---
 
 ### L3: PMOS/NMOS drain current v/s drain voltage
 
-*[Add your notes here]*
+![alt text](image-24.png)
+
+![alt text](image-25.png)
+
+vth diff for nmos and pmos due to diff in mobility
 
 ---
 
 ### L4: Step1 – Convert PMOS gate-source-voltage to Vin
 
-*[Add your notes here]*
+![alt text](image-26.png)
 
 ---
 
 ### L5: Step2 & Step3 – Convert PMOS and NMOS drain-source-voltage to vout
 
-*[Add your notes here]*
+![alt text](image-28.png)
+
+![alt text](image-29.png)
 
 ---
 
 ### L6: Step4 – Merge PMOS – NMOS load curves and plot VTC
 
-*[Add your notes here]*
+![alt text](image-30.png)
+
+
 
 ---
