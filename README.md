@@ -146,6 +146,44 @@ cd /home/uddhav/vsd/OpenROAD-flow-scripts
 - https://github.com/AnoushkaTripathi/Openlane_Installation_guide
 
 **Results:**
-- ![alt text](image-3.png)
+![alt text](image-3.png)
+
+---
+
+## Attempt 5: 
+
+**Commands:**
+
+```bash
+sudo apt install -y libgtest-dev cmake build-essential
+sudo apt install libspdlog-dev
+sudo apt install -y liblemon-dev
+
+
+git clone https://github.com/google/or-tools.git
+cd or-tools
+mkdir build && cd build
+cmake -DBUILD_DEPS=ON -DCMAKE_BUILD_TYPE=Release ..
+make -j$(nproc)
+sudo make install
+
+
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD.git
+cd OpenROAD/
+sudo ./etc/DependencyInstaller.sh -base
+mkdir build
+cd build
+cmake ..
+```
+
+**Result:**
+
+![alt text](image-5.png)
+![alt text](image-4.png)
+
+**Conclusion:**
+
+- openroad installation in openlane docker environment is succesfull.
+- but a local installation of ORFS is not possible in ubuntu 24. should use ubuntu 22.
 
 ---
